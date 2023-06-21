@@ -20,7 +20,7 @@ const Header = ({ handleLeftDrawerToggle }) => {
       {/* toggler button */}
       <Box
         sx={{
-          width: 228,
+          // width: 228,
           display: 'flex',
           [theme.breakpoints.down('md')]: {
             width: 'auto'
@@ -51,7 +51,6 @@ const Header = ({ handleLeftDrawerToggle }) => {
 
       {/* header search */}
       <SearchSection />
-      
     </>
   );
 };

@@ -1,18 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
-
-// material-ui
 import { styled, useTheme } from '@mui/material/styles';
 import { AppBar, Box, CssBaseline, Toolbar, useMediaQuery } from '@mui/material';
-
-// project imports
 import Header from './Header';
 import Sidebar from './Sidebar';
 import { drawerWidth } from '../../store/constant';
 import { SET_MENU } from '../../store/actions';
 
-
-// styles
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({ theme, open }) => ({
   ...theme.typography.mainContent,
   borderBottomLeftRadius: 0,
@@ -47,7 +41,6 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(({
 }));
 
 // ==============================|| MAIN LAYOUT ||============================== //
-
 const MainLayout = () => {
   const theme = useTheme();
   const matchDownMd = useMediaQuery(theme.breakpoints.down('md'));
@@ -78,7 +71,7 @@ const MainLayout = () => {
       </AppBar>
 
       {/* drawer */}
-      
+
       {/* main content */}
       <Main theme={theme} open={leftDrawerOpened}>
         {/* breadcrumb */}
@@ -86,7 +79,6 @@ const MainLayout = () => {
         <Outlet />
       </Main>
       <Sidebar drawerOpen={!matchDownMd ? leftDrawerOpened : !leftDrawerOpened} drawerToggle={handleLeftDrawerToggle} />
-
     </Box>
   );
 };

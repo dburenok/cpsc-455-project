@@ -12,7 +12,7 @@ import PopupState, { bindPopper, bindToggle } from 'material-ui-popup-state';
 import Transitions from 'ui-component/extended/Transitions';
 
 // assets
-import { IconAdjustmentsHorizontal, IconSearch, IconX } from '@tabler/icons';
+import { IconSearch, IconX } from '@tabler/icons';
 import { shouldForwardProp } from '@mui/system';
 
 // styles
@@ -74,11 +74,6 @@ const MobileSearch = ({ value, setValue, popupState }) => {
       }
       endAdornment={
         <InputAdornment position="end">
-          <ButtonBase sx={{ borderRadius: '12px' }}>
-            <HeaderAvatarStyle variant="rounded">
-              <IconAdjustmentsHorizontal stroke={1.5} size="1.3rem" />
-            </HeaderAvatarStyle>
-          </ButtonBase>
           <Box sx={{ ml: 2 }}>
             <ButtonBase sx={{ borderRadius: '12px' }}>
               <Avatar
@@ -170,15 +165,6 @@ const SearchSection = () => {
           startAdornment={
             <InputAdornment position="start">
               <IconSearch stroke={1.5} size="1rem" color={theme.palette.grey[500]} />
-            </InputAdornment>
-          }
-          endAdornment={
-            <InputAdornment position="end">
-              <ButtonBase sx={{ borderRadius: '12px' }}>
-                <HeaderAvatarStyle variant="rounded">
-                  <IconAdjustmentsHorizontal stroke={1.5} size="1.3rem" />
-                </HeaderAvatarStyle>
-              </ButtonBase>
             </InputAdornment>
           }
           aria-describedby="search-helper-text"

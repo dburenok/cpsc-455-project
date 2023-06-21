@@ -1,7 +1,4 @@
-// project imports
 import config from 'config';
-
-// action - state management
 import * as actionTypes from './actions';
 
 export const initialState = {
@@ -9,7 +6,7 @@ export const initialState = {
   defaultId: 'default',
   fontFamily: config.fontFamily,
   borderRadius: config.borderRadius,
-  opened: true
+  opened: false
 };
 
 // ==============================|| CUSTOMIZATION REDUCER ||============================== //

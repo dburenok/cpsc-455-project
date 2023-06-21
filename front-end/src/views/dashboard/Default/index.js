@@ -1,4 +1,5 @@
-import { BusMap } from "components/BusMap";
+import { BusMap } from 'components/BusMap';
+
 const Dashboard = () => {
   //TODO: Uncomment below snippet if loading page is needed
   // const [isLoading, setLoading] = useState(true);
@@ -6,9 +7,7 @@ const Dashboard = () => {
   //   setLoading(false);
   // }, []);
 
-  return (
-    <BusMap />
-  );
+  return <BusMap />;
 };
 
 export default Dashboard;
